@@ -1,0 +1,15 @@
+# INICIO - Publicar apenas os arquivos do site
+/*
+!/index.html
+!/robots.txt
+!/css/
+!/js/
+!/assets/
+
+# Materiais de edicao e arquivos locais nao sao assets publicos.
+*.prompt.txt
+*.zip
+*.log
+.env
+.env.*
+# FIM - Arquivos de publicacao

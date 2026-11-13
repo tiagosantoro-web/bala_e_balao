@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# PENDENTE: adicionar "Sitemap: https://DOMINIO/sitemap.xml" quando houver domínio
