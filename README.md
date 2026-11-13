@@ -73,13 +73,13 @@ Lighthouse ainda não foi executado; rodar depois da publicação.
 
 ## Publicação no Cloudflare Workers
 
-Repositório: `tiagosantoro-web/bala-e-balao` (privado). `wrangler.jsonc` configura a hospedagem estática e `.assetsignore` publica apenas `index.html`, `robots.txt`, `css/`, `js/` e `assets/`.
+Repositório: `tiagosantoro-web/bala_e_balao` (privado). `wrangler.jsonc` configura a hospedagem estática e `.assetsignore` publica apenas `index.html`, `robots.txt`, `css/`, `js/` e `assets/`.
 
 No painel da Cloudflare, em **Workers & Pages → Create → Import a repository**:
 
 | Campo | Valor |
 |---|---|
-| Repositório | `tiagosantoro-web/bala-e-balao` |
+| Repositório | `tiagosantoro-web/bala_e_balao` |
 | Branch de produção | `main` |
 | Project name | `bala-e-balao` |
 | Build command | Deixar vazio |
