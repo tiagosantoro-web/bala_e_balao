@@ -71,6 +71,21 @@ O mapa do Google só carrega quando o visitante clica em "Ver mapa", para não p
 
 Lighthouse ainda não foi executado; rodar depois da publicação.
 
-## Publicação
+## Publicação no Cloudflare Workers
 
-Por ser estático, funciona em qualquer hospedagem (Cloudflare, GreatPages, Netlify). Antes de publicar, resolva as pendências de nome, WhatsApp e endereço.
+Repositório: `tiagosantoro-web/bala-e-balao` (privado). `wrangler.jsonc` configura a hospedagem estática e `.assetsignore` publica apenas `index.html`, `robots.txt`, `css/`, `js/` e `assets/`.
+
+No painel da Cloudflare, em **Workers & Pages → Create → Import a repository**:
+
+| Campo | Valor |
+|---|---|
+| Repositório | `tiagosantoro-web/bala-e-balao` |
+| Branch de produção | `main` |
+| Project name | `bala-e-balao` |
+| Build command | Deixar vazio |
+| Deploy command | `npx wrangler deploy` |
+| Diretório raiz | Raiz do repositório |
+
+Depois do deploy, o site fica em `bala-e-balao.<subdominio>.workers.dev`. Cada envio para a `main` publica de novo automaticamente. Para usar um domínio próprio, acrescente `routes` com `custom_domain: true` em `wrangler.jsonc`, como no site da Solodev.
+
+Antes de divulgar, configure o WhatsApp em `js/script.js`; sem ele, os botões levam ao formulário, que avisa que o número não foi configurado.
