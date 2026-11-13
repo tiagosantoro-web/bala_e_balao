@@ -89,3 +89,14 @@ No painel da Cloudflare, em **Workers & Pages → Create → Import a repository
 Depois do deploy, o site fica em `bala-e-balao.<subdominio>.workers.dev`. Cada envio para a `main` publica de novo automaticamente. Para usar um domínio próprio, acrescente `routes` com `custom_domain: true` em `wrangler.jsonc`, como no site da Solodev.
 
 Antes de divulgar, configure o WhatsApp em `js/script.js`; sem ele, os botões levam ao formulário, que avisa que o número não foi configurado.
+
+## Publicação atual: GitHub Pages
+
+O site está publicado em https://tiagosantoro-web.github.io/bala_e_balao/ a partir do ramo `gh-pages` (repositório público). Para publicar uma mudança, envie a `main` também para esse ramo:
+
+```
+git push origin main
+git push origin main:gh-pages
+```
+
+O GitHub atualiza o site em cerca de 1 minuto. O arquivo `.nojekyll` faz o GitHub servir os arquivos como estão.
